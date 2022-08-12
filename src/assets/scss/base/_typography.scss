@@ -1,10 +1,12 @@
-/*=====================================
+/* =====================================
    01. Typography CSS
 ===================================== */
 
 body {
   color: $paragraph;
+
   @include font-size($baseFontSize);
+
   font-family: $baseFont;
   font-weight: 400;
   line-height: 1.6;
