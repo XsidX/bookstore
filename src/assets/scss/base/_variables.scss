@@ -1,0 +1,62 @@
+//== Typography Variable
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap");
+
+$baseFont: "Montserrat", sans-serif;
+$roboto: "Roboto", sans-serif;
+$lato: "Lato", sans-serif;
+$Oswald: "Oswald", sans-serif;
+$baseFontSize: 15px;
+$mdi-icon: "Material Design Icons";
+$fa-icon: "FontAwesome";
+
+//== Site Typography Colors
+$paragraph: #151515;
+$headingColor: #151515;
+$ashColor: #a1a1a1;
+
+$borderColor: #eee;
+$hvrColor: #182141;
+$menuColor: #85cad9;
+
+//== Site Brand Color
+$brandColor: #080b1a;
+$secondaryColor: #6a77bb;
+$brandColorDark: darken($brandColor, 15%);
+$brandColorLight: lighten($brandColor, 15%);
+$sectionColor: #10687c;
+$sectionColordark: #323440;
+$sectionColorLight: lighten($sectionColor, 15%);
+
+//== Alternative Color
+$white: #ffffff;
+$offWhite: #f8f9fc;
+$black: #000000;
+$blackSoft: #222222;
+$navy: #3b5998;
+$pink: #ff69b4;
+$violet: #9933cc;
+$olive: #559137;
+$green: #008000;
+$red: #e74c3c;
+$orange: #f5740a;
+$yellow: #fbbf00;
+
+//== Social Media Icons Color
+$facebook: #3b5999;
+$twitter: #1da1f2;
+$pinterest: #cb2028;
+$youtube: #cc332d;
+$reddit: #ff4500;
+$linkedin: #0077b5;
+
+//== Responsive Media Query Variables
+$xlmax-device: "only screen and (min-width: 1200px) and (max-width: 1599.98px)";
+$xl-device: "only screen and (min-width: 1200px)";
+$lg-device: "only screen and (min-width: 992px) and (max-width: 1199.98px)";
+$md-device: "only screen and (min-width: 768px) and (max-width: 991.98px)";
+$sm-device: "only screen and (max-width: 767.98px)";
+$xs-device: "only screen and (max-width: 575.98px)";
+$xxs-device: "only screen and (max-width: 479.98px)";
