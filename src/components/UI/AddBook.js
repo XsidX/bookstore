@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../../redux/books/book';
+import { bookActions } from '../../redux/books/books-slice';
+import { postBook } from '../../redux/books/api';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -18,9 +19,19 @@ const AddBook = () => {
 
   const addBookHandler = (e) => {
     e.preventDefault();
-    dispatch(addBook({ id: uuidv4(), title, author }));
+    const book = {
+      item_id: uuidv4(),
+      title,
+      author,
+      category: 'Fiction',
+    };
+    // add book to the store
+    dispatch(bookActions.addBook(book));
     setTitle('');
     setAuthor('');
+
+    // add book to the server/database/
+    dispatch(postBook(book));
   };
 
   return (
