@@ -1,12 +1,16 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './UI/Book';
 
-const Books = () => (
-  <div>
-    <Book title="Harry Potter" author="J.K. Rowling" />
-    <Book title="The Lord of the Rings" author="J.R.R. Tolkien" />
-    <Book title="The Hobbit" author="J.R.R. Tolkien" />
-  </div>
-);
+const Books = () => {
+  const books = useSelector((state) => state.books);
+  return (
+    <div>
+      {books.map((book) => (
+        <Book key={book.id} book={book} />
+      ))}
+    </div>
+  );
+};
 
 export default Books;

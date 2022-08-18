@@ -13,10 +13,6 @@
 - React(Create React App)
 - Sass
 
-## Live Demo
-
-[Here](https://math-magicians-sid.netlify.app/home) is a link to the live demo
-
 ## Getting Started
 
 ## Prerequisites
@@ -81,4 +77,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/XsidX/bookstore/blob/configure-redux/MIT.md) licensed.

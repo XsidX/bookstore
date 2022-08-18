@@ -1,15 +1,15 @@
 const CHECK = 'bookstore/categories/CHECK';
 
-export default function booksReducer(state = [], action) {
+export default function booksReducer(state = null, action) {
   switch (action.type) {
     case CHECK:
-      return 'Under construction';
+      return action.status;
 
     default:
       return state;
   }
 }
 
-export function checkStatus() {
-  return { type: CHECK };
+export function checkStatus(status) {
+  return { type: CHECK, status };
 }
