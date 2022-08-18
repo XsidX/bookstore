@@ -18,6 +18,10 @@ const AddBook = () => {
 
   const addBookHandler = (e) => {
     e.preventDefault();
+
+    // check for empty values
+    if (title.trim().length === 0 || author.trim().length === 0) return;
+
     const book = {
       item_id: uuidv4(),
       title,
