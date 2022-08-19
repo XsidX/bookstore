@@ -14,6 +14,7 @@
   &-form {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
+
     &-input {
       padding: 0.5rem 1rem;
       grid-column: span 5 / span 5;
@@ -27,6 +28,7 @@
         color: $ash;
       }
     }
+
     &-submit {
       grid-column: span 2 / span 2;
       display: flex;
