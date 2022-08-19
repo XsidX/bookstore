@@ -35,12 +35,13 @@ const AddBook = () => {
   };
 
   return (
-    <div>
-      <h2>ADD NEW BOOK</h2>
-      <form onSubmit={addBookHandler}>
+    <section className="add-book">
+      <h2 className="add-book-heading">ADD NEW BOOK</h2>
+      <form className="add-book-form" onSubmit={addBookHandler}>
         <input
           type="text"
           id="title"
+          className="add-book-form-input"
           name="title"
           value={title}
           placeholder="Book title"
@@ -49,14 +50,17 @@ const AddBook = () => {
         <input
           type="text"
           id="author"
+          className="add-book-form-input"
           name="author"
           value={author}
           placeholder="Book author"
           onChange={authorChangeHandler}
         />
-        <button type="submit">ADD BOOK</button>
+        <button className="add-book-form-submit" type="submit">
+          ADD BOOK
+        </button>
       </form>
-    </div>
+    </section>
   );
 };
 

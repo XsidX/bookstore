@@ -1,0 +1,36 @@
+.progress-container {
+  grid-column: span 4 / span 4;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: rotate(-90deg);
+  }
+
+  svg circle {
+    fill: none;
+    stroke: $border;
+    stroke-width: 9;
+    stroke-linecap: round;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-percentage {
+      font-size: 1.8rem;
+      color: $heading;
+    }
+
+    &-completed {
+      font-size: 0.875rem;
+      color: $heading;
+    }
+  }
+}

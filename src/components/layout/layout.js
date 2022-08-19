@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../Header';
 
 const Layout = ({ children }) => (
-  <div>
+  <div className="main-container">
     <Header />
     {children}
   </div>

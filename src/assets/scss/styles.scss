@@ -1,5 +1,19 @@
 // Base
-@import "base/variables";
-@import "base/mixins";
-@import "base/rfs";
-@import "base/typography";
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/rfs';
+@import 'base/typography';
+
+// Layout
+@import 'layout/layout';
+
+// Components
+@import 'components/header';
+@import 'components/book';
+@import 'components/books';
+@import 'components/add-book';
+@import 'components/circular-progress';
+@import 'components/chapter-card';
+
+// Pages
+@import 'pages/home';

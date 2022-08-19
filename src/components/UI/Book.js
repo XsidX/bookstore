@@ -4,10 +4,12 @@ import propTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 // import { bookActions } from '../../redux/books/books-slice';
 import { deleteBook } from '../../redux/books/book';
+import CircularProgressBar from './CircularProgressBar';
+import ChapterCard from './ChapterCard';
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();
-  const { item_id: id, title, author } = book;
+  const { item_id: id, title, author, category } = book;
 
   const removeBookHandler = (e) => {
     e.preventDefault();
@@ -15,15 +17,39 @@ const Book = ({ book }) => {
     dispatch(deleteBook(id));
   };
   return (
-    <>
-      <div>
-        <h2>{title}</h2>
-        <p>{author}</p>
+    <div className="book-card">
+      <div className="book-card-info">
+        <h3 className="book-card-category">{category}</h3>
+        <h2 className="book-card-title">{title}</h2>
+        <p className="book-card-author">{author}</p>
+
+        <div className="book-card-btns-wrapper">
+          <button
+            className="book-card-btns-wrapper-btn"
+            type="button"
+            onClick={removeBookHandler}
+          >
+            Comments
+          </button>
+          <button
+            className="book-card-btns-wrapper-btn"
+            type="button"
+            onClick={removeBookHandler}
+          >
+            Remove
+          </button>
+          <button
+            className="book-card-btns-wrapper-btn"
+            type="button"
+            onClick={removeBookHandler}
+          >
+            Edit
+          </button>
+        </div>
       </div>
-      <button type="button" onClick={removeBookHandler}>
-        REMOVE BOOK
-      </button>
-    </>
+      <CircularProgressBar />
+      <ChapterCard />
+    </div>
   );
 };
 
@@ -32,6 +58,7 @@ Book.propTypes = {
     item_id: propTypes.string.isRequired,
     title: propTypes.string.isRequired,
     author: propTypes.string.isRequired,
+    category: propTypes.string.isRequired,
   }).isRequired,
 };
 
