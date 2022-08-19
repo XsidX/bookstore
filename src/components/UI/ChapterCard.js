@@ -3,6 +3,8 @@ import propTypes from 'prop-types';
 
 const progressReducer = (state, action) => {
   switch (action.type) {
+    case 'LOAD_PROGRESS':
+      return { chapter: action.chapter, progress: action.progress };
     case 'CHAPTER_CHANGE':
       return { chapter: action.chapter, progress: (action.chapter / 24) * 100 };
     default:
@@ -24,16 +26,33 @@ const ChapterCard = ({ id, progressHandler }) => {
   };
 
   useEffect(() => {
+    const localStore = JSON.parse(localStorage.getItem('local_progress')) || [];
+
+    const localProgress = localStore.find((item) => item.local_id === id) || {};
+    const localProgressChapter = localProgress.chapter || 1;
+    const localProgressProgress = localProgress.progress || 0;
+    dispatch({
+      type: 'LOAD_PROGRESS',
+      chapter: localProgressChapter,
+      progress: localProgressProgress,
+    });
+
+    progressHandler(localProgressProgress);
+  }, []);
+
+  useEffect(() => {
     let booksStored = JSON.parse(localStorage.getItem('local_progress')) || [];
     const bookStored = booksStored.find((item) => item.local_id === id);
     if (bookStored) {
-      if (progress) bookStored.progress = progress;
+      if (chapter > 1) bookStored.chapter = chapter;
+      if (progress > 0) bookStored.progress = progress;
     } else {
-      booksStored = [...booksStored, { local_id: id, progress }];
+      booksStored = [...booksStored, { local_id: id, chapter, progress }];
     }
+
     localStorage.setItem('local_progress', JSON.stringify(booksStored));
     progressHandler(progress);
-  }, [progress]);
+  }, [chapter, progress]);
 
   return (
     <div className="chapter-card">
