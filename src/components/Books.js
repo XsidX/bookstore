@@ -4,6 +4,7 @@ import Book from './UI/Book';
 
 const Books = () => {
   const books = useSelector((state) => state.books.books);
+
   return (
     <section className="books-container">
       {books.map((book) => (

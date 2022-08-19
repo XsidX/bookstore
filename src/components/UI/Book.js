@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import propTypes from 'prop-types';
 
 import { useDispatch } from 'react-redux';
@@ -10,12 +10,18 @@ import ChapterCard from './ChapterCard';
 const Book = ({ book }) => {
   const dispatch = useDispatch();
   const { item_id: id, title, author, category } = book;
+  const [progress, setProgress] = useState(0);
 
   const removeBookHandler = (e) => {
     e.preventDefault();
 
     dispatch(deleteBook(id));
   };
+
+  const progressHandler = (progress) => {
+    setProgress(progress);
+  };
+
   return (
     <div className="book-card">
       <div className="book-card-info">
@@ -47,8 +53,8 @@ const Book = ({ book }) => {
           </button>
         </div>
       </div>
-      <CircularProgressBar />
-      <ChapterCard />
+      <CircularProgressBar id={id} progress={progress} />
+      <ChapterCard id={id} progressHandler={progressHandler} />
     </div>
   );
 };
