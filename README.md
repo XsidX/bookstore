@@ -4,14 +4,19 @@
 
 > The bookstore is a web application that allows users to:
 
-- Display a list of books.
-- Add a book.
+- Display a list of saved books.
+- Add a new book.
 - Remove a selected book.
+- Preview the chapter and progress saved while reading through a specific book. 
 
 ## Built With
 
 - React(Create React App)
 - Sass
+
+## Live Demo Link
+
+Check out the live demo [here](https://bookstore-sid.netlify.app/home)
 
 ## Getting Started
 
