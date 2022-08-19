@@ -1,14 +1,23 @@
 .book-card {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  padding: 1.625rem;
+  padding: 1rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
   text-transform: capitalize;
 
+  @media screen and (min-width: 768px) {
+    padding: 1.625rem;
+  }
+
   &-info {
-    grid-column: span 4 / span 4;
+    grid-column: span 6 / span 6;
+
+    @media screen and (min-width: 768px) {
+      grid-column: span 4 / span 4;
+    }
   }
 
   &-category {

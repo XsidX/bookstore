@@ -11,7 +11,7 @@ const Categories = () => {
   };
 
   return (
-    <div>
+    <div className="categories-page">
       <button type="button" onClick={checkStatusHandler}>
         Check Status
       </button>
