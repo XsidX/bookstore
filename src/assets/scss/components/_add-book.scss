@@ -1,0 +1,45 @@
+.add-book {
+  margin-top: 2rem;
+  padding: 1.2rem 0;
+  border-top: solid 1px $border;
+
+  &-heading {
+    font-size: 1rem;
+    font-weight: bold;
+    color: $ash;
+    letter-spacing: -0.18px;
+    margin-bottom: 1.2rem;
+  }
+
+  &-form {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+
+    &-input {
+      padding: 0.5rem 1rem;
+      grid-column: span 5 / span 5;
+      border: 1px solid $border;
+      outline: none;
+      font-family: $baseFont;
+      font-size: 1rem;
+      letter-spacing: -0.15px;
+
+      &::placeholder {
+        color: $ash;
+      }
+    }
+
+    &-submit {
+      grid-column: span 2 / span 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $btn;
+      border-radius: 3px;
+      font-family: $secondaryFont;
+      font-size: 0.813rem;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}

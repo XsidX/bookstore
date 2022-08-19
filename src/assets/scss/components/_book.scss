@@ -1,0 +1,60 @@
+.book-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  padding: 1rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  text-transform: capitalize;
+
+  @media screen and (min-width: 768px) {
+    padding: 1.625rem;
+  }
+
+  &-info {
+    grid-column: span 6 / span 6;
+
+    @media screen and (min-width: 768px) {
+      grid-column: span 4 / span 4;
+    }
+  }
+
+  &-category {
+    font-size: 0.875rem;
+    color: $heading;
+    opacity: 0.5;
+    padding-bottom: 0.25rem;
+  }
+
+  &-title {
+    font-size: 1.375rem;
+    font-weight: bold;
+    color: $heading;
+    padding-bottom: 0.15rem;
+  }
+
+  &-author {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: $paragraph;
+    font-family: $secondaryFont;
+    padding-bottom: 1rem;
+  }
+
+  &-btns-wrapper {
+    display: flex;
+    gap: 1.2rem;
+
+    &-btn {
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      font-family: $secondaryFont;
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: $paragraph;
+      text-transform: capitalize;
+    }
+  }
+}

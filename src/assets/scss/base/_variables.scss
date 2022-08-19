@@ -1,25 +1,22 @@
 //== Typography Variable
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&display=swap');
 
-$baseFont: "Montserrat", sans-serif;
-$roboto: "Roboto", sans-serif;
-$lato: "Lato", sans-serif;
-$Oswald: "Oswald", sans-serif;
-$baseFontSize: 15px;
-$mdi-icon: "Material Design Icons";
-$fa-icon: "FontAwesome";
+$baseFont: 'Montserrat', sans-serif;
+$secondaryFont: 'Roboto Slab', sans-serif;
+$roboto: 'Roboto', sans-serif;
 
 //== Site Typography Colors
-$paragraph: #151515;
-$headingColor: #151515;
-$ashColor: #a1a1a1;
-
-$borderColor: #eee;
-$hvrColor: #182141;
-$menuColor: #85cad9;
+$bodyColor: #f5f6fa;
+$paragraph: #4386bf;
+$logo: #0290ff;
+$heading: #121212;
+$ash: #888;
+$border: #e8e8e8;
+$btn: #0290ff;
 
 //== Site Brand Color
 $brandColor: #080b1a;
@@ -31,7 +28,7 @@ $sectionColordark: #323440;
 $sectionColorLight: lighten($sectionColor, 15%);
 
 //== Alternative Color
-$white: #fff;
+$white: #fafafa;
 $offWhite: #f8f9fc;
 $black: #000;
 $blackSoft: #222;
@@ -53,10 +50,10 @@ $reddit: #ff4500;
 $linkedin: #0077b5;
 
 //== Responsive Media Query Variables
-$xlmax-device: "only screen and (min-width: 1200px) and (max-width: 1599.98px)";
-$xl-device: "only screen and (min-width: 1200px)";
-$lg-device: "only screen and (min-width: 992px) and (max-width: 1199.98px)";
-$md-device: "only screen and (min-width: 768px) and (max-width: 991.98px)";
-$sm-device: "only screen and (max-width: 767.98px)";
-$xs-device: "only screen and (max-width: 575.98px)";
-$xxs-device: "only screen and (max-width: 479.98px)";
+$xlmax-device: 'only screen and (min-width: 1200px) and (max-width: 1599.98px)';
+$xl-device: 'only screen and (min-width: 1200px)';
+$lg-device: 'only screen and (min-width: 992px) and (max-width: 1199.98px)';
+$md-device: 'only screen and (min-width: 768px) and (max-width: 991.98px)';
+$sm-device: 'only screen and (max-width: 767.98px)';
+$xs-device: 'only screen and (max-width: 575.98px)';
+$xxs-device: 'only screen and (max-width: 479.98px)';

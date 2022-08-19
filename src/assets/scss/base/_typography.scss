@@ -3,18 +3,11 @@
 ===================================== */
 
 body {
-  color: $paragraph;
-
-  @include font-size($baseFontSize);
-
+  background-color: $bodyColor;
+  font-size: 1rem;
   font-family: $baseFont;
-  font-weight: 400;
-  line-height: 1.6;
   margin: 0;
-
-  @media #{$xs-device} {
-    @include font-size(16px);
-  }
+  padding: 0;
 }
 
 // /* Remove text-shadow in selection highlight. */
@@ -91,22 +84,22 @@ body {
 // }
 
 // /* Heading Default Style */
-// h1,
-// .h1,
-// h2,
-// .h2,
-// h3,
-// .h3,
-// h4,
-// .h4,
-// h5,
-// .h5,
-// h6,
-// .h6 {
-//   font-weight: 400;
-//   color: $headingColor;
-//   line-height: 1.2;
-// }
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p {
+  padding: 0;
+  margin: 0;
+}
 
 // h1,
 // .h1 {
@@ -176,18 +169,18 @@ body {
 //   max-width: 100%;
 // }
 
-// button {
-//   background-color: transparent;
-//   border: none;
-//   cursor: pointer;
-//   outline: none;
-//   padding: 0;
-//   box-shadow: none;
-//   transition: 0.4s;
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  box-shadow: none;
+  transition: 0.4s;
 
-//   &:active,
-//   &:focus {
-//     outline: none;
-//     box-shadow: none;
-//   }
-// }
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

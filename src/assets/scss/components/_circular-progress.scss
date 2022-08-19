@@ -1,0 +1,60 @@
+.progress-container {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  grid-column: span 6 / span 6;
+  padding-top: 3rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  height: 0.3px;
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    grid-column: span 4 / span 4;
+    gap: 1.2rem;
+  }
+
+  svg {
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: rotate(-90deg);
+
+    @media screen and (min-width: 768px) {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+
+  svg circle {
+    fill: none;
+    stroke: $border;
+    stroke-width: 6;
+    stroke-linecap: round;
+
+    @media screen and (min-width: 768px) {
+      stroke-width: 7;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-percentage {
+      font-size: 1.2rem;
+      color: $heading;
+
+      @media screen and (min-width: 768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &-completed {
+      font-size: 0.875rem;
+      color: $heading;
+    }
+  }
+}
