@@ -9,6 +9,10 @@
 - Remove a selected book.
 - Preview the chapter and progress saved while reading through a specific book. 
 
+## Project snapshot
+
+# [![sidney kaguli header](https://github.com/XsidX/bookstore/blob/dev/bookstore-desk%26mobile.png)](https://bookstore-sid.netlify.app/home)
+
 ## Built With
 
 - React(Create React App)
